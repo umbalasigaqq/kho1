@@ -16,8 +16,8 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: 'presentation',
-    title: 'Tạo bài thuyết trình',
-    description: 'Tạo dàn ý và nội dung cho bài thuyết trình chuyên nghiệp.',
+    title: 'Tạo Video tương tác với AI',
+    description: 'Biến bất kỳ video nào thành một bài giảng hấp dẫn với các câu hỏi trắc nghiệm.',
     bgColor: 'bg-lime-500',
     url: 'https://videotuongtacai.netlify.app',
   },
