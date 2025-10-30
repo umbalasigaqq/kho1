@@ -16,7 +16,6 @@ const Header: React.FC = () => {
           <div className="w-10 h-10 bg-[#EC4899] rounded-full flex items-center justify-center font-bold text-lg border-2 border-white/50">
             {user.initial}
           </div>
-          <span className="hidden sm:inline font-semibold">{user.name}</span>
           <button 
             onClick={logout}
             className="bg-gradient-to-r from-[#ef4444] to-[#f97316] hover:opacity-90 transition-opacity text-white font-semibold py-2 px-5 rounded-full shadow-lg shadow-black/20"
