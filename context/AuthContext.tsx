@@ -19,7 +19,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const login = () => {
     // In a real app, this would involve a call to a Google Sign-In API.
     // Here, we'll just set a mock user.
-    setUser({ name: 'Nhung Pham', initial: 'N' });
+    setUser({ name: 'User', initial: 'N' });
   };
 
   const logout = () => {
