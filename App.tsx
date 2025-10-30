@@ -12,6 +12,62 @@ interface Feature {
   bgColor: string;
   url?: string;
 }
+// FeatureCard Component
+// Đã thêm isComingSoon để hiển thị nhãn "Sắp ra mắt"
+const FeatureCard = ({ direction, icon, title, description, bgColor, url, isComingSoon }) => {
+  
+  const handleClick = () => {
+    // CHỨC NĂNG QUAN TRỌNG: Xử lý chuyển hướng
+    if (url) {
+      // Đảm bảo URL có protocol để trình duyệt biết đây là một liên kết bên ngoài
+      const fullUrl = url.startsWith('http') ? url : `https://${url}`;
+      window.open(fullUrl, '_blank');
+    } else {
+      // Nếu không có URL và không phải sắp ra mắt, thì không làm gì cả
+      console.log(`Chuyển đến trang nội bộ: ${title}`);
+    }
+  };
+
+
+
+  const isClickable = !!url && !isComingSoon;
+
+  return (
+    <div 
+      className={`
+        max-w-md w-full p-6 rounded-2xl shadow-xl transition-all duration-300 
+        flex items-start space-x-4 relative 
+        ${direction === 'left' ? 'lg:mr-auto' : 'lg:ml-auto'}
+        ${bgColor}
+        ${isClickable ? 'cursor-pointer hover:scale-[1.03] hover:shadow-emerald-500/50 transform' : 'cursor-default opacity-75'}
+      `}
+      onClick={isClickable ? handleClick : undefined}
+    >
+      {isComingSoon && (
+        // Nhãn "Sắp ra mắt" đã được thay đổi để khớp với kiểu dáng trong hình ảnh (màu cam, bo tròn, nổi bật)
+        <div className="absolute top-0 right-0 -mt-3 -mr-3 px-6 py-2 bg-orange-500 text-white font-semibold text-sm rounded-full shadow-lg transform translate-x-1/2 -translate-y-1/2 z-10">
+          Sắp ra mắt
+        </div>
+      )}
+
+      <div className={`p-3 rounded-full ${bgColor.replace('-500', '-700')} shadow-md`}>
+        <Icon name={icon} className="w-8 h-8 text-white" />
+      </div>
+      <div className="flex-1">
+        <h3 className="text-xl font-bold mb-1 text-white">{title}</h3>
+        <p className="text-sm text-gray-100">{description}</p>
+        {url && !isComingSoon && (
+            <span className="text-xs mt-2 inline-block font-medium text-white/80 border-b border-white/50">
+                Mở ứng dụng &rarr;
+            </span>
+        )}
+      </div>
+    </div>
+  );
+};
+// End of FeatureCard Component
+
+
 
 const features: Feature[] = [
   {
