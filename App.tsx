@@ -89,7 +89,7 @@ const App: React.FC = () => {
       <Header />
       <main className="container mx-auto p-4 sm:p-8 flex flex-col items-center">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-center mt-8 mb-12 text-emerald-300 drop-shadow-lg">
-            Bộ Công Cụ AI Cho Giáo Viên
+            Trợ thủ AI của giáo viên thời đại số
         </h2>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-4 mt-12">
             <div className="w-full lg:w-2/5 flex flex-col gap-6 items-center lg:items-end">
