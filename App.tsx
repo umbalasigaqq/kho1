@@ -20,12 +20,14 @@ const features: Feature[] = [
     description: 'Biến bất kỳ video nào thành một bài giảng hấp dẫn với các câu hỏi trắc nghiệm.',
     bgColor: 'bg-lime-500',
     url: 'https://videotuongtacai.netlify.app',
+    isComingSoon: true,
   },
   {
     icon: 'summary',
     title: 'Tóm tắt văn bản',
     description: 'Rút gọn tài liệu dài thành những điểm chính, dễ hiểu.',
     bgColor: 'bg-red-500',
+    isComingSoon: false,
   },
    {
     icon: 'email',
