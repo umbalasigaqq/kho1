@@ -1,0 +1,30 @@
+# Netlify Configuration File
+[build]
+  # Command để build project
+  command = "npm run build"
+  
+  # Thư mục chứa file sau khi build
+  publish = "dist"
+
+# Redirect rules cho SPA (Single Page Application)
+# Đảm bảo tất cả routes điều hướng về index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers để bảo mật và performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+
+# Cache cho static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
