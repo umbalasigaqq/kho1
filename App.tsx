@@ -12,6 +12,8 @@ interface Feature {
   bgColor: string;
   url?: string;
 }
+
+
 // FeatureCard Component
 // Đã thêm isComingSoon để hiển thị nhãn "Sắp ra mắt"
 const FeatureCard = ({ direction, icon, title, description, bgColor, url, isComingSoon }) => {
@@ -27,9 +29,6 @@ const FeatureCard = ({ direction, icon, title, description, bgColor, url, isComi
       console.log(`Chuyển đến trang nội bộ: ${title}`);
     }
   };
-
-
-
   const isClickable = !!url && !isComingSoon;
 
   return (
