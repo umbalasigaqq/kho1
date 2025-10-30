@@ -19,7 +19,7 @@ const features: Feature[] = [
     title: 'Tạo bài thuyết trình',
     description: 'Tạo dàn ý và nội dung cho bài thuyết trình chuyên nghiệp.',
     bgColor: 'bg-lime-500',
-    url: 'https://resilient-figolla-b475e3.netlify.app/',
+    url: 'videotuongtacai.netlify.app',
   },
   {
     icon: 'summary',
